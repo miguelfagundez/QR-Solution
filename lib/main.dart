@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'QR Solutions',
-      initialRoute: 'history',
+      initialRoute: 'home',
       routes: {
         'home': (_) => const HomePage(),
         'web': (_) => const WebPage(),
