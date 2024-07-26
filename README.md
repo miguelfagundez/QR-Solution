@@ -1,4 +1,4 @@
-# project_qr_solutions
+# QR Solutions
 
 A new Flutter project.
 
