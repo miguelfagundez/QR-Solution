@@ -8,10 +8,15 @@ import 'package:project_qr_solutions/src/pages/history/history_page.dart';
 import 'package:project_qr_solutions/src/pages/maps/maps_page.dart';
 import 'package:project_qr_solutions/src/pages/settings/settings_page.dart';
 import 'package:project_qr_solutions/src/pages/web/web_page.dart';
+import 'package:project_qr_solutions/src/theme/qr_theme.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  bool isDark = true;
+
+  MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,6 +30,9 @@ class MyApp extends StatelessWidget {
         'maps': (_) => const MapsPage(),
         'settings': (_) => const SettingsPage()
       },
+      theme: isDark
+          ? QRTheme(myPrimaryColor: Colors.deepPurple).myDarkTheme()
+          : QRTheme(myPrimaryColor: Colors.deepPurple).myLightTheme(),
       locale: const Locale('en'), //uiProvider.getCurrentLocale,
       supportedLocales: L10n.all,
       localizationsDelegates: const [

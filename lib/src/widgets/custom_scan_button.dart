@@ -6,7 +6,10 @@ class CustomScanButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      child: const Icon(Icons.camera_alt),
+      child: const Icon(
+        Icons.camera_alt_outlined,
+        color: Colors.white60,
+      ),
       onPressed: () {},
     );
   }
