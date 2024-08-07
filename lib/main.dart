@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -8,12 +9,27 @@ import 'package:project_qr_solutions/src/pages/history/history_page.dart';
 import 'package:project_qr_solutions/src/pages/maps/maps_page.dart';
 import 'package:project_qr_solutions/src/pages/settings/settings_page.dart';
 import 'package:project_qr_solutions/src/pages/web/web_page.dart';
+import 'package:project_qr_solutions/src/services/providers/ui_state.dart';
 import 'package:project_qr_solutions/src/theme/qr_theme.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const QRSolutionsApp());
+
+class QRSolutionsApp extends StatelessWidget {
+  const QRSolutionsApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => UiState()),
+      ],
+      child: MyApp(),
+    );
+  }
+}
 
 class MyApp extends StatelessWidget {
-  bool isDark = true;
+  bool isDark = false;
 
   MyApp({super.key});
 
