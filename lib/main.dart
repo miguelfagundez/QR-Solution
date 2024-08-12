@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
       title: 'QR Solutions',
       initialRoute: 'home',
       routes: {
-        'home': (_) => const HomePage(),
+        'home': (_) => HomePage(),
         'web': (_) => const WebPage(),
         'history': (_) => const HistoryPage(),
         'maps': (_) => const MapsPage(),

@@ -10,7 +10,7 @@ class CreatorPage extends StatelessWidget {
         title: const Text('Creator'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.plus_one_outlined),
+            icon: const Icon(Icons.add),
             onPressed: () {},
           ),
         ],
