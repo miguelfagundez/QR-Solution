@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_qr_solutions/src/services/providers/db_provider.dart';
 import 'package:provider/provider.dart';
 
 import 'package:project_qr_solutions/src/pages/creator/creator_page.dart';
@@ -23,6 +24,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final uiState = Provider.of<UiState>(context);
     _pageIndex = uiState.indexSelected;
+
+    DBProvider.db.database;
 
     return Scaffold(
       body: IndexedStack(
