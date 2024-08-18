@@ -1,4 +1,4 @@
-# QR Solutions
+# Testing Project
 
 A new Flutter project.
 
